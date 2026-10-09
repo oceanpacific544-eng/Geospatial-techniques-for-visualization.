@@ -1,0 +1,6 @@
+{
+  "name": "HydroGeo Watershed Analytics",
+  "description": "Geospatial techniques and multi-spectral satellite image interpretation platform for watershed delineation, erosion diagnostic, and soil-water conservation planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,191 @@
+import { EarthExplorerScene } from '../types/watershed';
+
+export const EARTH_EXPLORER_SCENES: EarthExplorerScene[] = [
+  // --- USGS EarthExplorer Optical Scenes ---
+  {
+    entityId: 'LC09_L1TP_144050_20240402_02_T1',
+    satellite: 'Landsat 9 OLI-2',
+    agency: 'USGS EarthExplorer',
+    pathRowOrTile: 'WRS-2 Path 144 / Row 050',
+    acquisitionDate: '2024-04-02T05:22:18Z',
+    cloudCoverPercent: 1.2,
+    sunElevationAngle: 62.4,
+    resolutionM: 30,
+    bandsAvailable: ['B1 Ultra Blue (30m)', 'B2 Blue (30m)', 'B3 Green (30m)', 'B4 Red (30m)', 'B5 NIR (30m)', 'B6 SWIR-1 (30m)', 'B7 SWIR-2 (30m)', 'B8 Pan (15m)', 'B10 Thermal (100m)'],
+    thumbnailUrl: '/src/assets/images/watershed_rgb_satellite_1791549307729.jpg',
+    watershedCoverage: 'Chinnar Micro-Watershed & Rayalaseema Basin (AP)',
+    recommendedUse: 'Surface water extraction (MNDWI), Normalized Difference Moisture Index (NDMI), Multi-temporal LULC.'
+  },
+  {
+    entityId: 'LC08_L1TP_144050_20180320_02_T1',
+    satellite: 'Landsat 8 OLI',
+    agency: 'USGS EarthExplorer',
+    pathRowOrTile: 'WRS-2 Path 144 / Row 050',
+    acquisitionDate: '2018-03-20T05:18:42Z',
+    cloudCoverPercent: 0.8,
+    sunElevationAngle: 58.6,
+    resolutionM: 30,
+    bandsAvailable: ['B1 Coastal', 'B2 Blue', 'B3 Green', 'B4 Red', 'B5 NIR', 'B6 SWIR-1', 'B7 SWIR-2', 'B8 Pan (15m)'],
+    thumbnailUrl: '/src/assets/images/watershed_erosion_drone_1791549336878.jpg',
+    watershedCoverage: 'Chinnar Catchment Pre-Treatment Baseline 2018',
+    recommendedUse: 'Baseline decadal change detection, pre-intervention vegetation vigor & barren land benchmark.'
+  },
+  {
+    entityId: 'S2B_MSIL2A_20240328T051649_N0510_R062_T43QDF',
+    satellite: 'Sentinel-2B MSI (Level-2A BOA)',
+    agency: 'ESA / Copernicus',
+    pathRowOrTile: 'MGRS Tile 43QDF',
+    acquisitionDate: '2024-03-28T05:16:49Z',
+    cloudCoverPercent: 0.4,
+    sunElevationAngle: 64.1,
+    resolutionM: 10,
+    bandsAvailable: ['B2 Blue (10m)', 'B3 Green (10m)', 'B4 Red (10m)', 'B8 NIR (10m)', 'B8A Narrow NIR (20m)', 'B11 SWIR-1 (20m)', 'B12 SWIR-2 (20m)'],
+    thumbnailUrl: '/src/assets/images/watershed_fcc_infrared_1791549324069.jpg',
+    watershedCoverage: 'Deccan Basalt Plateau & Manjara Sub-Catchment (MH)',
+    recommendedUse: 'High-resolution chlorophyll vigor (NDVI), canopy density, and 500m buffer zone crop health.'
+  },
+  {
+    entityId: 'S2A_MSIL2A_20240415T052131_N0510_R062_T44QKF',
+    satellite: 'Sentinel-2A MSI (Level-2A BOA)',
+    agency: 'ESA / Copernicus',
+    pathRowOrTile: 'MGRS Tile 44QKF',
+    acquisitionDate: '2024-04-15T05:21:31Z',
+    cloudCoverPercent: 0.2,
+    sunElevationAngle: 66.8,
+    resolutionM: 10,
+    bandsAvailable: ['B2 Blue (10m)', 'B3 Green (10m)', 'B4 Red (10m)', 'B8 NIR (10m)', 'B5 RedEdge (20m)', 'B11 SWIR-1 (20m)'],
+    thumbnailUrl: '/src/assets/images/watershed_interventions_aerial_1791549348705.jpg',
+    watershedCoverage: 'Bundelkhand Ken-Betwa Ravine Catchment (MP)',
+    recommendedUse: 'Gully reclamation monitoring, Red-Edge chlorophyll absorption, and post-monsoon farm pond detection.'
+  },
+  {
+    entityId: 'LC09_L1TP_145051_20231214_02_T1',
+    satellite: 'Landsat 9 OLI-2',
+    agency: 'USGS EarthExplorer',
+    pathRowOrTile: 'WRS-2 Path 145 / Row 051',
+    acquisitionDate: '2023-12-14T05:28:10Z',
+    cloudCoverPercent: 3.1,
+    sunElevationAngle: 47.9,
+    resolutionM: 30,
+    bandsAvailable: ['B1-B7 Multispectral', 'B10 Thermal Infrared'],
+    thumbnailUrl: '/src/assets/images/watershed_erosion_drone_1791549336878.jpg',
+    watershedCoverage: 'Ken-Betwa Bundelkhand Ravines (#WDC-PMKSY-MP-03)',
+    recommendedUse: 'Ravine erosion classification, thermal evapotranspiration, and soil moisture deficit mapping.'
+  },
+
+  // --- ISRO Bhuvan NRSC Indian Satellite Missions ---
+  {
+    entityId: 'RS2_L4_20240215_77E14N_NRSC',
+    satellite: 'Resourcesat-2 LISS-IV MX',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: 'Sub-Scene 77E / 14N (Mono & Stereo)',
+    acquisitionDate: '2024-02-15T04:45:10Z',
+    cloudCoverPercent: 0.0,
+    sunElevationAngle: 58.7,
+    resolutionM: 5.8,
+    bandsAvailable: ['Band 2 Green (5.8m)', 'Band 3 Red (5.8m)', 'Band 4 NIR (5.8m)'],
+    thumbnailUrl: '/src/assets/images/watershed_interventions_aerial_1791549348705.jpg',
+    watershedCoverage: 'WDC-PMKSY Andhra/Karnataka Check Dam Corridors',
+    recommendedUse: 'Cadastral-level farm pond demarcation, check dam weir silt inspection, and gully plug mapping.'
+  },
+  {
+    entityId: 'RS2A_AWIFS_20240310_INDIA_NRSC',
+    satellite: 'Resourcesat-2A AWiFS',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: 'Quadrant-West Central India',
+    acquisitionDate: '2024-03-10T05:12:00Z',
+    cloudCoverPercent: 0.5,
+    sunElevationAngle: 61.2,
+    resolutionM: 56,
+    bandsAvailable: ['Green (56m)', 'Red (56m)', 'NIR (56m)', 'SWIR (56m)'],
+    thumbnailUrl: '/src/assets/images/watershed_fcc_infrared_1791549324069.jpg',
+    watershedCoverage: 'Basin-Scale Macro Catchments (Krishna & Godavari Basins)',
+    recommendedUse: '5-day repetivity regional agricultural drought index, phenological crop progress, and macro water spread.'
+  },
+  {
+    entityId: 'CARTODEM_14N077E_V3_R1',
+    satellite: 'Cartosat-1 CartoDEM v3 R1',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: 'Tile 14N 077E (1 Degree Quad)',
+    acquisitionDate: '2023-11-10T00:00:00Z',
+    cloudCoverPercent: 0.0,
+    sunElevationAngle: 51.2,
+    resolutionM: 10,
+    bandsAvailable: ['Stereo Fore-Aft DEM (10m GSD)', 'Ortho-Stereo Panchromatic (2.5m)'],
+    thumbnailUrl: '/src/assets/images/watershed_rgb_satellite_1791549307729.jpg',
+    watershedCoverage: 'All Deccan & Bundelkhand PMKSY Watersheds',
+    recommendedUse: 'High-precision micro-watershed delineation, ridge-to-valley slope gradient, and drainage D8 flow direction.'
+  },
+  {
+    entityId: 'CARTO2E_HR_20231015_077E14N',
+    satellite: 'Cartosat-2E High-Resolution Panchromatic + MX',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: 'Scene Path 052 / Row 031',
+    acquisitionDate: '2023-10-15T05:01:22Z',
+    cloudCoverPercent: 0.0,
+    sunElevationAngle: 55.4,
+    resolutionM: 0.65,
+    bandsAvailable: ['Panchromatic (0.65m)', 'Blue (2m)', 'Green (2m)', 'Red (2m)', 'NIR (2m)'],
+    thumbnailUrl: '/src/assets/images/watershed_interventions_aerial_1791549348705.jpg',
+    watershedCoverage: 'High-Value SWC Structure Sites & Check Dam Weirs',
+    recommendedUse: 'Sub-meter civil structure crack diagnosis, spillway scour detection, and contour trench depth audit.'
+  },
+  {
+    entityId: 'EOS04_RISAT1A_FRS1_20240120',
+    satellite: 'EOS-04 (RISAT-1A) C-Band SAR',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: 'FRS-1 Stripmap Mode (Ascending)',
+    acquisitionDate: '2024-01-20T18:15:40Z',
+    cloudCoverPercent: 0.0, // All-weather radar
+    sunElevationAngle: 0.0,
+    resolutionM: 3.0,
+    bandsAvailable: ['HH Polarization', 'HV Polarization', 'VV Polarization', 'VH Polarization'],
+    thumbnailUrl: '/src/assets/images/watershed_fcc_infrared_1791549324069.jpg',
+    watershedCoverage: 'Cloud-Covered Monsoon Flood & Inundation Catchments',
+    recommendedUse: 'All-weather volumetric soil moisture estimation, dielectric surface roughness, and monsoon pond volume.'
+  },
+  {
+    entityId: 'EOS06_OCM3_20240301_HYDRO',
+    satellite: 'Oceansat-3 (EOS-06) Ocean Color Monitor',
+    agency: 'ISRO Bhuvan NRSC',
+    pathRowOrTile: '13-Band Hyperspectral / Multispectral Suite',
+    acquisitionDate: '2024-03-01T06:10:00Z',
+    cloudCoverPercent: 2.1,
+    sunElevationAngle: 59.8,
+    resolutionM: 360,
+    bandsAvailable: ['13 Visible and NIR Narrow Bands (412nm to 865nm)'],
+    thumbnailUrl: '/src/assets/images/watershed_rgb_satellite_1791549307729.jpg',
+    watershedCoverage: 'Peninsular Coastal & Inland River Basins',
+    recommendedUse: 'Suspended sediment discharge tracking at watershed basin outlets into reservoirs and estuaries.'
+  },
+
+  // --- Elevation Datasets (DEM) ---
+  {
+    entityId: 'SRTM1N14E077V3',
+    satellite: 'SRTM DEM 1-Arc Second',
+    agency: 'NASA / USGS',
+    pathRowOrTile: '1 Arc-Second Grid (N14 E077)',
+    acquisitionDate: '2000-02-11T00:00:00Z',
+    cloudCoverPercent: 0.0,
+    sunElevationAngle: 45.0,
+    resolutionM: 30,
+    bandsAvailable: ['C-Band Radar Interferometric Elevation'],
+    thumbnailUrl: '/src/assets/images/watershed_rgb_satellite_1791549307729.jpg',
+    watershedCoverage: 'Global / Indian Subcontinent Baseline',
+    recommendedUse: 'Long-term baseline morphometry, catchment hypsometry, and stream order validation.'
+  },
+  {
+    entityId: 'ASTER_GDEM_V3_N14E077',
+    satellite: 'ASTER Global DEM v3',
+    agency: 'NASA / USGS',
+    pathRowOrTile: 'ASTGTMV003_N14E077',
+    acquisitionDate: '2019-08-05T00:00:00Z',
+    cloudCoverPercent: 0.0,
+    sunElevationAngle: 52.0,
+    resolutionM: 30,
+    bandsAvailable: ['VNIR Stereo Band 3N & 3B Correlation DEM'],
+    thumbnailUrl: '/src/assets/images/watershed_rgb_satellite_1791549307729.jpg',
+    watershedCoverage: 'Indian Semi-Arid Ridge Systems',
+    recommendedUse: 'Comparative terrain slope verification, micro-topography cross-validation with CartoDEM.'
+  }
+];

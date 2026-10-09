@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HydroGeo Watershed Analytics</title>
+    <meta name="description" content="Geospatial techniques and multi-spectral satellite image interpretation platform for watershed delineation, erosion diagnostic, and soil-water conservation planning." />
+    <meta property="og:title" content="HydroGeo Watershed Analytics" />
+    <meta property="og:description" content="Geospatial techniques and multi-spectral satellite image interpretation platform for watershed delineation, erosion diagnostic, and soil-water conservation planning." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Gracefully ignore WebSocket/HMR module runner errors per runtime environment guidelines
+      window.addEventListener('unhandledrejection', function(event) {
+        if (
+          event?.reason?.message?.includes?.('WebSocket') ||
+          event?.reason?.message?.includes?.('failed to connect') ||
+          String(event?.reason?.stack || '').includes('createWebSocketModuleRunnerTransport') ||
+          String(event?.reason?.stack || '').includes('@vite/client')
+        ) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (
+          event?.message?.includes?.('WebSocket') ||
+          String(event?.filename || '').includes('@vite/client')
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
